@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+        <button id="darkModeToggle">🌙</button>
+        <h2 class="logo">The Sign In</h2>
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="SignIn.html">Sign In</a>
+            <a href="SignUp.html">Sign Up</a>
+        </div>
+    </div>
+    <!-- SIGN IN -->
+    <section id="signin" class="auth">
+
+        <div class="form-box">
+            <h2>Welcome Back!</h2>
+            <p>Sign in to continue</p>
+
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <button onclick="login()">Login</button>
+
+            <p id="msg" style="color:red; display:none;">Invalid Data ❌</p>
+
+            <p>Don't have an account?
+                <a href="SignUp.html">Sign Up</a>
+            </p>
+        </div>
+
+    </section>
+
+
+    </section>
+    <script>
+        function login() {
+
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === "" || pass === "") {
+                alert("Fill all fields ❗");
+                return;
+            }
+
+            // Fake login
+            if (user === "admin" && pass === "1234") {
+                window.location.href = "index.html";
+            } else {
+                document.getElementById("msg").style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        const btn = document.getElementById("darkModeToggle");
+
+        btn.onclick = function () {
+            document.body.classList.toggle("dark");
+        };
+    </script>
+
+
+</body>
+
+</html>

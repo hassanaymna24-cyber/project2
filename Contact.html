@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="Navbar">
+        <button id="darkModeToggle">🌙</button>
+        <h2 class="logo">Contact Us</h2>
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="SignIn.html">Sign In</a>
+            <a href="SignUp.html">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h1>Contact Us 📞</h1>
+        <p>We are always here to help you ❤️</p>
+
+        <!-- MAP -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps?q=Shibin%20El%20Kom&output=embed" width="100%" height="250"
+                style="border:0;" loading="lazy">
+            </iframe>
+            <a href="https://www.google.com/maps?q=Shibin+El+Kom" target="_blank">
+                Open in Google Maps
+            </a>
+        </div>
+
+        <div class="contact-container">
+
+            <!-- FORM -->
+            <div class="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+
+                <button onclick="showMessage()">Send Message</button>
+
+                <p id="successMsg" style="display:none; color: green; font-weight: bold;">
+                    ✅ Message sent successfully
+                </p>
+            </div>
+
+            <!-- INFO -->
+            <div class="contact-info">
+
+                <h3>📍 Address</h3>
+                <p>Shibin El Kom, Egypt</p>
+
+                <h3>📞 Phone</h3>
+                <p><a href="tel:01288287219">Call Now</a></p>
+
+                <h3>✉ Email</h3>
+                <p><a href="mailto:hassanaymna24@gmail.com">Send Email</a></p>
+
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; Food House. All rights reserved</p>
+    </footer>
+
+    <!-- DARK MODE -->
+    <script>
+        const btn = document.getElementById("darkModeToggle");
+
+        btn.onclick = function () {
+            document.body.classList.toggle("dark");
+        };
+    </script>
+
+    <!-- SUCCESS MESSAGE -->
+    <script>
+        function showMessage() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill all fields ❗");
+                return;
+            }
+
+            let msg = document.getElementById("successMsg");
+            msg.style.display = "block";
+
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 3000);
+        }
+    </script>
+
+    <script>
+        let btn = document.querySelector("button");
+
+        btn.innerHTML = "Sending...";
+
+        setTimeout(() => {
+            btn.innerHTML = "Send Message";
+        }, 2000);
+    </script>
+
+</body>
+
+</html>

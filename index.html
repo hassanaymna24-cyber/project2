@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+
+
+    <div class="page">
+
+        <!-- NAVBAR -->
+        <div class="Navbar">
+            <button id="darkModeToggle">🌙</button>
+            <h2 class="logo">Food House</h2>
+
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+                <a href="SignIn.html">Sign In</a>
+                <a href="SignUp.html">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <h1>Welcome to Food House 🍽️</h1>
+
+                <p>
+                    Discover the taste of happiness with every bite. We serve fresh,
+                    delicious,
+                    and high-quality meals made with love ❤️
+                </p>
+
+                <p>
+                    From juicy burgers 🍔 to cheesy pizza 🍕 and creamy pasta 🍝,
+                    we bring you the best food experience in town.
+                </p>
+
+                <p>Fast delivery • Fresh ingredients • Amazing taste</p>
+
+                <a href="Menu.html" class="btn">Explore Menu</a>
+
+            </div>
+
+        </section>
+
+        <!-- FOOD SECTION -->
+        <div class="food-section">
+
+            <div class="card">
+                <img src="/image/1212.jpg">
+                <h3>Burger</h3>
+                <p>Juicy burger</p>
+
+                <a href="Menu.html" for="order-toggle" class="order-btn">order now</a>
+
+            </div>
+
+            <div class="card">
+                <img src="/image/1616.jpg">
+                <h3>Pizza</h3>
+                <p>Cheesy pizza</p>
+
+                <a href="Menu.html" for="order-toggle" class="order-btn">order now</a>
+            </div>
+
+            <div class="card">
+                <img src="/image/1414.jpg">
+                <h3>Pasta</h3>
+                <p>Italian pasta</p>
+
+                <a href="Menu.html" for="order-toggle" class="order-btn">order now</a>
+            </div>
+
+        </div>
+        <section class="offer">
+
+            <h2>Special Offer 🎉</h2>
+            <p>Get 20% off on your first order! Use code: FIRST20 at checkout.</p>
+            <p>Valid until the end of the month!</p>
+        </section>
+        <!-- WHY CHOOSE US -->
+        <div class="featured">
+            <h2>Why choose us?</h2>
+            <div>🚀 Fast Delivery</div>
+            <div>👨‍🍳 Expert Chefs</div>
+            <div>🥗 Fresh Food</div>
+            <div>⭐ Best Quality</div>
+            <div>💰 Affordable Prices</div>
+            <div>😊 Customer Satisfaction</div>
+            <div>🌐 Easy Online Ordering</div>
+            <div>📞 24/7 Support</div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>&copy; Food House. All rights reserved</p>
+            <p>Phone: 01288287219</p>
+            <p><a href="mailto:hassanaymna24@gmail.com">Email</a></p>
+
+        </footer>
+        <script>
+            const btn = document.getElementById("darkModeToggle");
+
+            btn.onclick = function () {
+                document.body.classList.toggle("dark");
+            };
+        </script>
+        <script>
+            document.getElementById("darkModeToggle").onclick = function () {
+                document.body.classList.toggle("dark");
+            };
+        </script>
+</body>
+
+</html>
